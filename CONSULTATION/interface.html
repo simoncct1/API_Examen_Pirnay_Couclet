@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Films d'horreur</title>
+        <script src="jquery.min.js"></script>
+        <script src="api_client.js"></script>
+        <script src="gestion_etats.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <p class="film_info"> </p>
+            
+            </br></br>
+
+            <!-- Read -->
+             <input id = "getFilm" type="submit" value="Tout les films"/>
+           </br></br>
+
+           <!-- Read by ID -->
+            <input id = "getFilmbyId" type="submit" value="Film par ID"/>
+            <select id="idSelection">
+            </select>
+          </br></br>
+          <!-- Create -->
+            <input id = "setFilm" type="submit" value="Nouveau Film"/>
+            <div id="add" style="display:none;">
+              <div id="addInputs">
+                <label for="Titre">Titre</label>
+                <input type="text" name="titre" id="titre" size=2>
+                <label for="Realisateur">Realisateur</label>
+                <input type="text" name="realisateur" id="realisateur" size=2>
+                <input id = "sendFilm" type="submit" value="Ajouter"/>
+                <input id = "annulerAdd" type="submit" value="Annuler"/>
+              </div>
+            </div>
+            </br></br>
+           
+
+            <!-- Update -->
+            <input id = "updateFilm" type="submit" value="Mettre à jour un film"/>
+            <div id="modifier" style="display:none;">
+              <div id="idSelect" >
+                <label for="idFilm">Choisissez le film</label>
+                <select class="filmSelect" id="idFilm" placeholder="Titre du film">
+                  <option value="empty"></option>
+                 </select>
+                </div>
+              <div id="updateInputs">
+                <label for="Titre">Nouveau titre</label>
+                <input type="text" name="newTitre" id="newTitre" size=2>
+                <label for="Realisateur">Nouveau realisateur</label>
+                <input type="text" name="newRealisateur" id="newRealisateur" size=2>
+                <input id = "modifFilm" type="submit" value="modifier"/>
+                <input id = "annuler" type="submit" value="annuler"/>
+              </div>
+            </div>
+          </br></br>
+
+          <!-- //Delete -->
+            <input id = "deleteFilm" type="submit" value="Supprimer un film"/>
+            <div id="delete" style="display:none;">
+            <div id="idSelectForDelete" >
+              <label for="idFilm">Choisissez le film à supprimer</label>
+              <select class="filmSelect" id="idFilmToDel" placeholder="Titre du film">
+                <option value="empty"></option>
+               </select>
+              <input id = "deleteDef" type="submit" value="Supprimer" style="color:red;"/>
+              <input id = "annulerDelete" type="submit" value="Annuler"/>
+            </div>
+          </div>
+            <!-- //for update -->
+           
+        
+            </div>
+           
+        </div>
+
+
+    </body>
+</html>
