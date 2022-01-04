@@ -3,7 +3,7 @@ $(document).ready(function() {
   listUpdates();
 function listUpdates(){
   $.ajax({
-    url: "http://localhost/examen_api/"
+    url: "http://localhost/API_Examen_Pirnay_Couclet/"
 }).then(function(data) {
     for (i = 0; i < data.length; i++) {
       $('#idSelection').append("<option value="+data[i]._Id +">"+data[i]._Id+"</option>");
@@ -15,7 +15,7 @@ function listUpdates(){
 function resetFilms(){
   console.log("reseted")
   $.ajax({
-    url: "http://localhost/examen_api/"
+    url: "http://localhost/API_Examen_Pirnay_Couclet/"
 }).then(function(data) {
   $('.film_info').empty();
     for (i = 0; i < data.length; i++) {
@@ -28,7 +28,7 @@ function resetFilms(){
 $("#getFilm").click(function(){
  
   $.ajax({
-      url: "http://localhost/examen_api/"
+      url: "http://localhost/API_Examen_Pirnay_Couclet/"
   }).then(function(data) {
     $('.film_info').empty();
       for (i = 0; i < data.length; i++) {
@@ -43,7 +43,7 @@ $("#getFilmbyId").click(function(){
   var id=$("#idSelection").val();
   console.log(id);
   $.ajax({
-      url: "http://localhost/examen_api/film/" +id
+      url: "http://localhost/API_Examen_Pirnay_Couclet/film/" +id
   }).then(function(data) {
     $('.film_info').empty();
     listUpdates();
@@ -60,7 +60,7 @@ $("#getFilmbyId").click(function(){
     var titre=$("#titre").val();
     var realisateur=$("#realisateur").val();
   $.ajax({
-         url:"http://localhost/examen_api/create",
+         url:"http://localhost/API_Examen_Pirnay_Couclet/create",
          method:"POST",
          data:{
            Titre: titre,
@@ -89,7 +89,7 @@ var id=$("#idFilm").val();
   var realisateur=$("#newRealisateur").val();
 
   $.ajax({
-         url:"http://localhost/examen_api/update",
+         url:"http://localhost/API_Examen_Pirnay_Couclet/update",
          method:"PUT",
          data:{
            Id: id,
@@ -114,7 +114,7 @@ var id=$("#idFilm").val();
 $("#deleteDef").click(function(){
 var id=$("#idFilmToDel").val()
 $.ajax({
-         url:"http://localhost/examen_api/delete",
+         url:"http://localhost/API_Examen_Pirnay_Couclet/delete",
          method:"DELETE",
          data:{
            Id:id
