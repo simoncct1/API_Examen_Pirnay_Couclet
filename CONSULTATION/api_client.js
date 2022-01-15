@@ -32,7 +32,7 @@ $("#getFilm").click(function(){
   }).then(function(data) {
     $('.film_info').empty();
       for (i = 0; i < data.length; i++) {
-        $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li> Realisateur:"+data[i]._Realisateur+"</li></ul>");
+        $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li class='realisateur'> Realisateur:"+data[i]._Realisateur+"</li></ul>");
       }
   });
 
