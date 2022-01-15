@@ -21,6 +21,7 @@ p{
     color:white;
     font-family:Arial Black;
 		font-size:20px;
+    text-align: center;
     }
 
 input:hover{
@@ -43,6 +44,9 @@ ul {
   list-style-type: none;
   display:flex;
   margin:10px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   input{
@@ -52,15 +56,17 @@ ul {
     font-size:20px;
     margin-left: 20px;
     display:inline;
-    
-    
+    padding: 5px;
+    margin: 5px;
 
 
     
 }
 
 
-
+#wraper{
+  display: inline-block;
+}
 select{
 
   font-weight: bold;
@@ -85,3 +91,32 @@ label{
   padding-left:20px;
 }
 
+.film_info{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="submit"]{
+  border-radius: 8px;
+}
+input[type="text"]{
+ margin-top: 10px;
+}
+label{
+  font-weight: bold;
+}
+#updateInputs{
+  margin-top: 10px;
+}
+select.filmSelect{
+  margin-top: 10px;
+}
+#wrapper{
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+
+align-items: center;
+padding-left: 30%
+}

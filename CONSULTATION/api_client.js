@@ -19,7 +19,7 @@ function resetFilms(){
 }).then(function(data) {
   $('.film_info').empty();
     for (i = 0; i < data.length; i++) {
-      $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li> Realisateur:"+data[i]._Realisateur+"</li></ul>");
+      $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li class='realisateur'> Realisateur: "+data[i]._Realisateur+"</li></ul>");
     }
 });
 }
@@ -32,7 +32,7 @@ $("#getFilm").click(function(){
   }).then(function(data) {
     $('.film_info').empty();
       for (i = 0; i < data.length; i++) {
-        $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li class='realisateur'> Realisateur:"+data[i]._Realisateur+"</li></ul>");
+        $('.film_info').append("<ul><li>Titre: "+data[i]._Titre+"</li><li class='realisateur'> Realisateur: "+data[i]._Realisateur+"</li></ul>");
       }
   });
 
@@ -47,7 +47,7 @@ $("#getFilmbyId").click(function(){
   }).then(function(data) {
     $('.film_info').empty();
     listUpdates();
-        $('.film_info').append("<ul><li>Titre: "+data._Titre+"</li><li> Realisateur:"+data._Realisateur+"</li></ul>");
+        $('.film_info').append("<ul><li>Titre: "+data._Titre+"</li><li class='realisateur'> Realisateur: "+data._Realisateur+"</li></ul>");
   });
 
 });
@@ -57,12 +57,15 @@ $("#getFilmbyId").click(function(){
 
 //Gestion setFilm
   $("#sendFilm").click(function(){
-    var titre=$("#titre").val();
+    var id;
+    var titre=$("#Titre").val();
     var realisateur=$("#realisateur").val();
+    console.log(titre);
   $.ajax({
          url:"http://localhost/API_Examen_Pirnay_Couclet/create",
          method:"POST",
          data:{
+           Id: id,
            Titre: titre,
            Realisateur:realisateur    
          },
@@ -92,7 +95,7 @@ var id=$("#idFilm").val();
          url:"http://localhost/API_Examen_Pirnay_Couclet/update",
          method:"PUT",
          data:{
-           Id: id,
+        
            Titre: titre,
            Realisateur:realisateur
          },

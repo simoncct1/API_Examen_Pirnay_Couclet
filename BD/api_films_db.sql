@@ -65,6 +65,9 @@ CREATE TABLE `Films` (
 -- Déchargement des données de la table `Films`
 --
 
+INSERT INTO `Films` (`Id`, `Realisateur`, `Titre`) VALUES
+(3, 'Chuck Patton', 'DEAD SPACE : DOWNFALL'),
+(6, 'Drew Goddard', 'LA CABANE DANS LES BOIS');
 --
 -- Index pour les tables déchargées
 --

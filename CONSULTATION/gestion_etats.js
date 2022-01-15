@@ -1,7 +1,6 @@
 $(document).ready(function () {
    //Gestion setFilm
    $("#setFilm").click(function(){
-     console.log("cc");
     $("#add").show();
   });//setFilm
   
